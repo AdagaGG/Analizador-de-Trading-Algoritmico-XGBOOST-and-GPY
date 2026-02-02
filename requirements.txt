@@ -5,6 +5,7 @@ xgboost==2.0.3
 scikit-learn==1.4.0
 numpy<2.0.0
 pandas
-numba
+# Lock crítico para compatibilidad con pandas_ta
+numba==0.61.2
 tqdm
 pandas_ta
