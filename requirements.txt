@@ -3,9 +3,8 @@ yfinance
 plotly
 xgboost==2.0.3
 scikit-learn==1.4.0
-numpy<2.0.0
 pandas
-# Lock crítico para compatibilidad con pandas_ta
+numpy<2.0.0
 numba==0.61.2
 tqdm
-pandas_ta
+pandas-ta==0.3.14b0
