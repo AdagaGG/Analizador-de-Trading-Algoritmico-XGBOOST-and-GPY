@@ -4,7 +4,7 @@ plotly
 xgboost==2.0.3
 scikit-learn==1.4.0
 pandas
-numpy==1.26.4
+numpy<2.0.0
 numba==0.61.2
 tqdm
-https://github.com/twopirllc/pandas-ta/archive/refs/heads/main.zip
+https://github.com/twopirllc/pandas-ta/archive/main.zip
