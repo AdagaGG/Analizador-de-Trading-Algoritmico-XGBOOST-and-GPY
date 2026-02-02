@@ -4,20 +4,14 @@ name = "pandas_ta"
 """
 from importlib.util import find_spec
 from pathlib import Path
-from pkg_resources import get_distribution, DistributionNotFound
 
+# --- INICIO DEL BYPASS ---
+# Hemos eliminado pkg_resources para evitar el error DistributionNotFound
+# Asignamos la versión manualmente ya que estamos usando la librería localmente.
 
-_dist = get_distribution("pandas_ta")
-try:
-    # Normalize case for Windows systems
-    here = Path(_dist.location) / __file__
-    if not here.exists():
-        # not installed, but there is another version that *is*
-        raise DistributionNotFound
-except DistributionNotFound:
-    __version__ = "Please install this project with setup.py"
+version = __version__ = "0.3.14b0"
 
-version = __version__ = _dist.version
+# --- FIN DEL BYPASS ---
 
 Imports = {
     "alphaVantage-api": find_spec("alphaVantageAPI") is not None,
